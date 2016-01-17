@@ -13,11 +13,15 @@
             "name": "David Contavalli",
             "email": "mauipipe@gmail.com"
         }
+        {
+            "name": "Andi Nitsche",
+            "email": "andi@inbaz.org"
+        }
     ],
         
     "require": {
         "php":">=5.3.3",
-        "behat/behat":">=2.4.6 <3.0.0",
+        "behat/behat":">=3.0.*",
 	"zendframework/zendframework":">=2.1.0"
     },
     "require-dev": {
