@@ -44,7 +44,13 @@ class ModuleDetailRetriever
         if (array_key_exists($moduleName, $this->loadedModules)) {
 
               $module = $this->loadedModules[$moduleName];
-              $moduleConfig = $module->getAutoloaderConfig();
+			  if(method_exists($module, 'getAutoloaderConfig')) {
+              	$moduleConfig = $module->getAutoloaderConfig();
+			  } elseif(method_exists($module, 'getConfig')) {
+              	$moduleConfig = $module->getConfig();
+			  } else {
+			  	throw new \Exception('Unable to load autoloader config');
+			  }
 
                return $moduleConfig[self::STANDARD_AUTOLOLOADER][self::NAMESPACE_KEY][$moduleName];
 
