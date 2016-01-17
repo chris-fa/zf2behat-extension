@@ -52,7 +52,11 @@ class ModuleDetailRetriever
 			  	throw new \Exception('Unable to load autoloader config');
 			  }
 
-               return $moduleConfig[self::STANDARD_AUTOLOLOADER][self::NAMESPACE_KEY][$moduleName];
+			  if(!empty($moduleConfig[self::STANDARD_AUTOLOLOADER][self::NAMESPACE_KEY][$moduleName])) {
+	            return $moduleConfig[self::STANDARD_AUTOLOLOADER][self::NAMESPACE_KEY][$moduleName];
+			  } else {
+			  	return null;
+			  }
 
         }
 
