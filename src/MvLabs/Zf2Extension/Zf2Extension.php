@@ -17,7 +17,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder,
  */
 class Zf2Extension implements ExtensionInterface
 {
-    public function load(array $config,ContainerBuilder $container)
+    public function load(ContainerBuilder $container, array $config)
     {
          $loader = new XmlFileLoader( $container, new FileLocator(__DIR__.'/services'));
          $loader->load('zf2.xml');
