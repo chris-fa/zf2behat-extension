@@ -11,6 +11,8 @@ use Symfony\Component\DependencyInjection\ContainerBuilder,
     Symfony\Component\DependencyInjection\Loader\XmlFileLoader,
     Symfony\Component\Config\FileLocator;
 
+use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
+
 /**
  * Description of Zf2Extensions
  *
@@ -59,6 +61,10 @@ class Zf2Extension implements ExtensionInterface
     {
         return 'zf2';
     }
+
+	public function process(ContainerBuilder $container)
+	{
+	}
 }
 
 return new Zf2Extension();
