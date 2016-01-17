@@ -2,7 +2,7 @@
 
 namespace MvLabs\Zf2Extension;
 
-use Behat\Behat\Extension\Extension;
+use Behat\Testwork\ServiceContainer\Extension;
 
 use MvLabs\Zf2Extension\Compiler\Zf2ApplicationCompilerPasses;
 
