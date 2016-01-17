@@ -2,7 +2,8 @@
 
 namespace MvLabs\Zf2Extension;
 
-use Behat\Testwork\ServiceContainer\Extension as ExtensionInterface;
+use Behat\Testwork\ServiceContainer\Extension as ExtensionInterface,
+	Behat\Testwork\ServiceContainer\ExtensionManager;
 
 use MvLabs\Zf2Extension\Compiler\Zf2ApplicationCompilerPasses;
 
