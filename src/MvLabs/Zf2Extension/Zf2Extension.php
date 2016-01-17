@@ -2,7 +2,7 @@
 
 namespace MvLabs\Zf2Extension;
 
-use Behat\Testwork\ServiceContainer\Extension;
+use Behat\Testwork\ServiceContainer\Extension as ExtensionInterface;
 
 use MvLabs\Zf2Extension\Compiler\Zf2ApplicationCompilerPasses;
 
@@ -15,7 +15,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder,
  *
  * @author David Contavalli <mauipipe@gmail.com>
  */
-class Zf2Extension extends Extension
+class Zf2Extension implements ExtensionInterface
 {
     public function load(array $config,ContainerBuilder $container)
     {
