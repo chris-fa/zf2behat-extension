@@ -1,5 +1,5 @@
 {
-    "name": "mvlabs/zf2behat-extension",
+    "name": "inbaz/zf2behat-extension",
     "description": "Zend Framework 2 extension for Behat",
     "license": "MIT",
     "type": "behat-extension",
