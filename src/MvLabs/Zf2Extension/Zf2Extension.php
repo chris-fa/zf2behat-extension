@@ -45,6 +45,19 @@ class Zf2Extension implements ExtensionInterface
         );
 
     }
+
+	public function initialize(ExtensionManager $extensionManager) 
+	{
+	}
+
+	public function configure(ArrayNodeDefinition $builder)
+    {
+	}
+
+	public function getConfigKey()
+    {
+        return 'zf2';
+    }
 }
 
 return new Zf2Extension();
