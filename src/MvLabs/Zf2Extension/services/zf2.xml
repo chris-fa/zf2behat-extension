@@ -22,7 +22,8 @@
     </parameters>
 
     <services>
-        <service id="behat_zf2_extension.zf_mvc_application" class="%behat.zf2_extension.zf_mvc_application.class%" factory-class="%behat.zf2_extension.zf_mvc_application.class%" factory-method="init">
+        <service id="behat_zf2_extension.zf_mvc_application" class="%behat.zf2_extension.zf_mvc_application.class%">
+            <factory class="%behat.zf2_extension.zf_mvc_application.class%" method="init"/>
             <argument>%behat.zf2_extension.config_data%</argument>
         </service>
 
